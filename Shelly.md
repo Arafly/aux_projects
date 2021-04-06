@@ -6,4 +6,4 @@
 - Ensure that in the ssh client system-wide configuration file in /etc/ssh/. *PasswordAuthentication* is set to yes
 - Make sure you create create a file to hold the private key, specifically name *id_rsa* and copy the content of the authorized_keys into *id_rsa.pub*
 
->I have excluded both the id_rsa and id_rsa.pub from by placing them in my .gitignore
+>I have excluded both the id_rsa from by placing them in my .gitignore
