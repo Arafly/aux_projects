@@ -1,32 +1,32 @@
 ## Automate the creation of new users on linux from a CSV file
 
 1. For speed (because my VS Code and other utilies), I carried out the exercise on local which is a Windows, and used a tool called *winscp* to transfer the files to a client Ubuntu in my VirtualBox, named *Shelly*
-*winscp images
+
+![](https://github.com/Arafly/aux_projects/blob/master/assets/winscp.PNG)
+
+![](https://github.com/Arafly/aux_projects/blob/master/assets/wisnc.PNG)
 
 2. After the successful transfer of the file to Shelly. I connected Shelly to a cloned Ubuntu machine named *remoteful*. SSH'd from Shelly to Remoteful using password authentication, then transfered the folder containing the script file, scv and authorized keys
 
-*scp
+![](https://github.com/Arafly/aux_projects/blob/master/assets/Scp.PNG)
 
 3. I ran the script of Remoteful. Where each of the users were successfully created.
 
-*usercreation
+![](https://github.com/Arafly/aux_projects/blob/master/assets/usercreation.PNG)
 
 4. Verified the creation of the group and the aformentioned users by checking the group and /etc/passwd
 
 `tail /etc/passwd`
 
-*names
+![](https://github.com/Arafly/aux_projects/blob/master/assets/Names.PNG)
 
 `getent group developers`
 
-*groupie
+![](https://github.com/Arafly/aux_projects/blob/master/assets/groupie.PNG)
 
-5. Finally, I logged in some of the created users to test if the creation was really succesful. As seen in the screenshot, I used the user "Osas".
+1. Finally, I logged in some of the created users to test if the creation was really succesful. As seen in the screenshot, I used the user "Osas".
 
-*newuser
-
-
-
+![](https://github.com/Arafly/aux_projects/blob/master/assets/newuser.PNG)
 
 
 ### A few gotchas/pointers while working on this script
