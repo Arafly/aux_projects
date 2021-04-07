@@ -1,3 +1,34 @@
+## Automate the creation of new users on linux from a CSV file
+
+1. For speed (because my VS Code and other utilies), I carried out the exercise on local which is a Windows, and used a tool called *winscp* to transfer the files to a client Ubuntu in my VirtualBox, named *Shelly*
+*winscp images
+
+2. After the successful transfer of the file to Shelly. I connected Shelly to a cloned Ubuntu machine named *remoteful*. SSH'd from Shelly to Remoteful using password authentication, then transfered the folder containing the script file, scv and authorized keys
+
+*scp
+
+3. I ran the script of Remoteful. Where each of the users were successfully created.
+
+*usercreation
+
+4. Verified the creation of the group and the aformentioned users by checking the group and /etc/passwd
+
+`tail /etc/passwd`
+
+*names
+
+`getent group developers`
+
+*groupie
+
+5. Finally, I logged in some of the created users to test if the creation was really succesful. As seen in the screenshot, I used the user "Osas".
+
+*newuser
+
+
+
+
+
 ### A few gotchas/pointers while working on this script
 
 - Ensure you leave a shebang at the beginning of your script (#!/bin/bash) this would automatically set the shell to bash, so you don't get unexpected surprises.
